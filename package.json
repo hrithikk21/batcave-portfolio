@@ -1,0 +1,10 @@
+{
+  "name": "batcave-portfolio",
+  "version": "1.0.0",
+  "description": "Hrithik Patil's interactive Batcave portfolio — a single self-contained HTML/CSS/JS page, no build step required.",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "preview": "npx serve ."
+  }
+}
