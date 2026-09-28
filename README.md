@@ -69,3 +69,12 @@ Everything persisted (avatar config, exploration progress, visited rooms,
 a session ID, achievement flags, the "have you visited before" flag) is
 stored in `localStorage`, scoped to whichever browser opens the page. None
 of it is sent anywhere — there is no backend.
+
+## Deploy checklist
+- **Site URL:** meta tags, canonical, sitemap and robots assume `https://hrithikk21.github.io/batcave-portfolio/`.
+  If your repo/site lives elsewhere, find-and-replace that URL in `index.html`, `sitemap.xml` and `robots.txt`.
+- **Link preview image:** `og-image.png` (1200x630). Test with LinkedIn Post Inspector / opengraph.xyz after deploying;
+  platforms cache previews, so re-scrape after changes.
+- **Analytics:** free GoatCounter. Sign up, then set `GOATCOUNTER_CODE` at the top of the script in `index.html`.
+  Until then nothing loads. Tracks page views, room opens, resume download/view, terminal use, project link clicks.
+- **Music:** add `music/theme.mp3` or `theme.ogg`. **Resume:** replace `resume/Hrithik_Patil_Resume.pdf`.

@@ -3,7 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hrithik Patil — The Batcave</title>
+<title>Hrithik Patil — Full Stack Developer | The Batcave Portfolio</title>
+<meta name="description" content="Hrithik Patil is a Full Stack Developer from Mumbai (React, Node.js, Express, MongoDB, Next.js). Explore his projects — Voyagenie, Aerthx, Wayve, Blink — in an interactive Batcave-themed portfolio.">
+<meta name="author" content="Hrithik Jatin Patil">
+<meta name="keywords" content="Hrithik Patil, Full Stack Developer, MERN developer, React developer, Node.js, Next.js, Mumbai, portfolio, Voyagenie, Aerthx">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0f1216">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://hrithikk21.github.io/batcave-portfolio/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Link previews (WhatsApp, LinkedIn, Slack, iMessage, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hrithik Patil — The Batcave">
+<meta property="og:title" content="Hrithik Patil — Full Stack Developer">
+<meta property="og:description" content="Step into the Batcave: an interactive portfolio of projects, experience and skills. React · Node.js · MongoDB · Next.js.">
+<meta property="og:url" content="https://hrithikk21.github.io/batcave-portfolio/">
+<meta property="og:image" content="https://hrithikk21.github.io/batcave-portfolio/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hrithik Patil — Full Stack Developer. The Batcave interactive portfolio.">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hrithik Patil — Full Stack Developer">
+<meta name="twitter:description" content="Step into the Batcave: an interactive portfolio of projects, experience and skills.">
+<meta name="twitter:image" content="https://hrithikk21.github.io/batcave-portfolio/og-image.png">
+<meta name="twitter:image:alt" content="Hrithik Patil — Full Stack Developer. The Batcave interactive portfolio.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hrithik Jatin Patil",
+  "alternateName": "Hrithik Patil",
+  "jobTitle": "Full Stack Developer",
+  "url": "https://hrithikk21.github.io/batcave-portfolio/",
+  "image": "https://hrithikk21.github.io/batcave-portfolio/og-image.png",
+  "address": { "@type": "PostalAddress", "addressLocality": "Mumbai", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+  "alumniOf": "St John College of Engineering and Management",
+  "knowsAbout": ["JavaScript", "React", "Node.js", "Express", "MongoDB", "Next.js", "TypeScript", "Socket.IO", "REST APIs"],
+  "sameAs": ["https://github.com/hrithikk21", "https://www.linkedin.com/in/hrithik-patil-592915321", "https://aerthx.in", "https://voyagenie.onrender.com"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -160,7 +204,14 @@
     backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(201,151,58,0.08);
     display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
-  .brand{ font-size:11px; letter-spacing:2px; color:var(--amber); }
+  .brand-row{ display:flex; align-items:center; gap:10px; min-width:0; }
+  .avatar-badge{ position:relative; flex-shrink:0; width:40px; height:40px; border-radius:50%; padding:0; overflow:hidden;
+    background:var(--slate); border:2px solid var(--amber-dim); box-shadow:0 0 0 2px var(--wall), var(--glow-amber);
+    transition:transform .15s ease, box-shadow .2s ease; }
+  .avatar-badge:hover{ transform:scale(1.06); box-shadow:0 0 0 2px var(--wall), 0 0 16px rgba(201,151,58,0.5); }
+  .avatar-badge:active{ transform:scale(.94); }
+  .avatar-badge svg{ position:absolute; top:-6%; left:0; width:100%; height:auto; }
+  .brand{ font-size:11px; letter-spacing:2px; color:var(--amber); min-width:0; }
   .brand small{ display:block; font-size:9px; color:var(--steel); letter-spacing:1px; margin-top:4px; }
   .clock{ font-size:9px; color:var(--steel); letter-spacing:1px; margin-top:4px; }
   .clock b{ color:var(--amber); font-weight:600; }
@@ -314,6 +365,8 @@
   .entry-date{ font-size:10.5px; color:var(--bronze); white-space:nowrap; }
   .entry-sub{ font-size:11.5px; color:var(--steel); margin-top:2px; }
   .entry ul{ margin:8px 0 0; padding-left:18px; }
+  .proj-links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .proj-links .btn-ghost, .proj-links .btn-primary{ padding:9px 14px; font-size:10px; }
   .entry li{ font-size:12.5px; line-height:1.6; margin-bottom:4px; }
   .tag-row{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
   .tag{ background:var(--slate); color:var(--offwhite); font-size:9.5px; letter-spacing:0.5px; padding:4px 8px; border:1px solid var(--wall); }
@@ -425,16 +478,29 @@
   #musicPlayBtn{ font-size:9.5px; padding:9px 16px; box-shadow:0 3px 0 #000; }
   #musicPlayBtn:disabled{ opacity:.45; cursor:not-allowed; box-shadow:none; }
   #musicSwitchWrap{ display:flex; align-items:center; gap:7px; font-size:9px; letter-spacing:1px; color:var(--offwhite); }
-  #musicOnOffSwitch{ width:34px; height:19px; border-radius:20px; background:rgba(255,255,255,0.15); border:1px solid var(--wall);
+  .toggle-switch{ width:34px; height:19px; border-radius:20px; background:rgba(255,255,255,0.15); border:1px solid var(--wall);
     position:relative; padding:0; transition:background .18s ease; flex-shrink:0; }
-  #musicOnOffSwitch i{ position:absolute; top:1.5px; left:2px; width:14px; height:14px; border-radius:50%; background:var(--offwhite);
+  .toggle-switch i{ position:absolute; top:1.5px; left:2px; width:14px; height:14px; border-radius:50%; background:var(--offwhite);
     display:block; transition:transform .18s var(--ease-out); }
-  #musicOnOffSwitch.on{ background:var(--amber); }
-  #musicOnOffSwitch.on i{ transform:translateX(14px); background:#171207; }
+  .toggle-switch.on{ background:var(--amber); }
+  .toggle-switch.on i{ transform:translateX(14px); background:#171207; }
   #musicVolWrap{ display:flex; align-items:center; gap:8px; font-size:8.5px; letter-spacing:1px; color:var(--steel); }
   #musicVolWrap input{ flex:1; accent-color:var(--amber); }
   #musicNote{ font-size:9.5px; line-height:1.6; color:var(--steel); margin:0; }
   #musicNote code{ color:var(--amber-dim); }
+
+  #morePanel{ position:fixed; top:calc(60px + env(safe-area-inset-top,0px)); right:14px; z-index:76;
+    width:min(80vw,230px); background:var(--charcoal-2); border:2px solid var(--wall); border-radius:8px;
+    box-shadow:var(--shadow-panel); opacity:0; transform:translateY(-8px) scale(.97); pointer-events:none;
+    transition:opacity .2s ease, transform .2s var(--ease-out); }
+  #morePanel.show{ opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+  #moreHead{ display:flex; align-items:center; justify-content:space-between; padding:10px 12px; border-bottom:1px solid var(--wall); }
+  #moreHead span{ font-size:9px; letter-spacing:1px; color:var(--amber); }
+  #moreClose{ background:transparent; border:none; color:var(--amber); font-size:13px; padding:4px 6px; }
+  #moreBody{ padding:6px 12px 12px; display:flex; flex-direction:column; }
+  .more-row{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:9px 0;
+    font-size:10.5px; letter-spacing:0.5px; color:var(--offwhite); border-bottom:1px solid rgba(255,255,255,0.06); }
+  .more-row:last-child{ border-bottom:none; }
   @media (min-width:700px){
     #termOverlay, #avatarOverlay{ align-items:center; }
     #termPanel, #avatarPanel{ border-radius:12px; max-height:min(80vh,680px); box-shadow:var(--shadow-panel); }
@@ -529,6 +595,14 @@
 </style>
 </head>
 <body>
+<noscript>
+  <div style="max-width:560px;margin:40px auto;padding:20px;font-family:monospace;color:#f3ece0;line-height:1.7">
+    <h1 style="color:#c9973a;font-size:18px">Hrithik Patil — Full Stack Developer</h1>
+    <p>This portfolio is an interactive Batcave and needs JavaScript. The short version: Full Stack Developer from Mumbai working with React, Node.js, Express, MongoDB and Next.js.</p>
+    <p>Projects: <a href="https://aerthx.in" style="color:#e8b563">Aerthx</a> (carbon credit marketplace), <a href="https://voyagenie.onrender.com" style="color:#e8b563">Voyagenie</a> (AI travel planner), Wayve, Blink. More on <a href="https://github.com/hrithikk21" style="color:#e8b563">GitHub</a>.</p>
+    <p><a href="resume/Hrithik_Patil_Resume.pdf" style="color:#e8b563">Download resume (PDF)</a> · <a href="https://www.linkedin.com/in/hrithik-patil-592915321" style="color:#e8b563">LinkedIn</a> · hrithikjpatil40@gmail.com</p>
+  </div>
+</noscript>
 <div id="app">
 
   <div id="ambient"><div class="flicker-veil"></div></div>
@@ -555,28 +629,40 @@
 
   <section id="main" class="screen">
     <div class="topbar">
-      <div class="brand pixel">HRITHIK PATIL<small>FULL STACK DEVELOPER</small>
-        <div class="clock" id="clock">MUMBAI — <b>--:--:--</b></div>
-        <div class="sess" id="sessId">ACCESS ID: ----</div>
+      <div class="brand-row">
+        <button class="avatar-badge" id="avatarBadge" aria-label="Customize your Batcave avatar" title="Your identity — tap to customize">
+          <span id="avatarBadgeSvg"></span>
+        </button>
+        <div class="brand pixel">HRITHIK PATIL<small>FULL STACK DEVELOPER</small>
+          <div class="clock" id="clock">MUMBAI — <b>--:--:--</b></div>
+          <div class="sess" id="sessId">ACCESS ID: ----</div>
+        </div>
       </div>
       <div class="top-tools">
         <div class="explore-pill" id="explorePill"><span class="ring" id="exploreRing"></span><b>0</b>/0 DISCOVERED</div>
         <button class="icon-btn" id="termBtn" aria-label="Open Batcomputer terminal" title="Batcomputer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M7 9l3 3-3 3"/><path d="M12 15h5"/></svg>
         </button>
-        <button class="icon-btn" id="soundBtn" aria-label="Toggle sound effects and generated ambient hum" title="Sound effects + hum">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9v6h4l5 5V4L8 9H4z"/></svg>
-        </button>
         <button class="icon-btn" id="musicBtn" aria-label="Open music player" title="Music" aria-haspopup="true" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
           <span class="eq-badge" id="musicEq"><i></i><i></i><i></i></span>
         </button>
-        <button class="icon-btn" id="avatarBtn" aria-label="Customize your avatar" title="Identity Configurator">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c-3 0-5 2-5 5 0 2 1 3.2 1 3.2S6 13 6 16v3a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-3c0-3-2-4.8-2-4.8s1-1.2 1-3.2c0-3-2-5-5-5z"/><circle cx="9.5" cy="9.5" r=".6" fill="currentColor"/><circle cx="14.5" cy="9.5" r=".6" fill="currentColor"/></svg>
+        <button class="icon-btn" id="moreBtn" aria-label="More controls" title="More" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg>
         </button>
-        <button class="icon-btn" id="detectiveBtn" aria-label="Toggle detective mode" title="Detective mode">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="6"/><path d="M21 21l-5.2-5.2"/></svg>
-        </button>
+      </div>
+    </div>
+    <div id="morePanel" role="menu" aria-label="More controls">
+      <div id="moreHead"><span class="pixel">MORE</span><button id="moreClose" aria-label="Close menu">✕</button></div>
+      <div id="moreBody">
+        <div class="more-row">
+          <span>Sound FX + Hum</span>
+          <button id="sfxSwitch" class="toggle-switch" role="switch" aria-checked="false" aria-label="Toggle sound effects and generated ambient hum"><i></i></button>
+        </div>
+        <div class="more-row">
+          <span>Detective Mode</span>
+          <button id="detectiveSwitch" class="toggle-switch" role="switch" aria-checked="false" aria-label="Toggle detective mode"><i></i></button>
+        </div>
       </div>
     </div>
     <div class="ticker"><span id="tickerText" class="show">BATCAVE ONLINE · POWER 98% · SECURITY ACTIVE</span></div>
@@ -652,7 +738,7 @@
         <button id="musicPlayBtn" class="btn-primary" style="clip-path:none;border-radius:3px;">PLAY</button>
         <label id="musicSwitchWrap">
           <span>Music</span>
-          <button id="musicOnOffSwitch" role="switch" aria-checked="false" aria-label="Turn music on or off"><i></i></button>
+          <button id="musicOnOffSwitch" class="toggle-switch" role="switch" aria-checked="false" aria-label="Turn music on or off"><i></i></button>
         </label>
       </div>
       <div id="musicVolWrap">
@@ -684,6 +770,31 @@
 </div>
 
 <script>
+/* ============================================================
+   LIGHT ANALYTICS — GoatCounter (free, cookie-less, no personal data).
+   1. Sign up at https://www.goatcounter.com and pick a site code.
+   2. Paste that code below (e.g. "hrithik" -> hrithik.goatcounter.com).
+   Until a code is set, nothing loads and nothing is sent.
+   Respects Do Not Track and skips localhost automatically.
+   ============================================================ */
+const GOATCOUNTER_CODE = "hrithik";
+const analyticsOn = !!GOATCOUNTER_CODE && navigator.doNotTrack !== "1" && !["localhost","127.0.0.1",""].includes(location.hostname);
+if(analyticsOn){
+  const gs = document.createElement("script");
+  gs.async = true; gs.src = "https://gc.zgo.at/count.js";
+  gs.dataset.goatcounter = `https://${GOATCOUNTER_CODE}.goatcounter.com/count`;
+  document.head.appendChild(gs);
+}
+function track(name, title){
+  if(!analyticsOn) return;
+  try{ if(window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path:name, title:title||name, event:true }); }catch(e){}
+}
+// outbound project/GitHub link clicks (any element with data-track)
+document.addEventListener("click", (e)=>{
+  const t = e.target.closest && e.target.closest("[data-track]");
+  if(t) track("click/" + t.dataset.track);
+});
+
 const ink = "#1b1f24";
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isFinePointer = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
@@ -732,7 +843,7 @@ const icons = {
     ${hs(36,46,52,48,"Voyagenie — the AI travel planner. Tap to jump to the details below.","proj-0")}
     <rect x="104" y="56" width="60" height="34" fill="#0f1216" stroke="${ink}" stroke-width="3.5"/>
     <rect x="109" y="61" width="50" height="22" fill="#c9973a" opacity="0.6"/>
-    ${hs(104,56,60,38,"Wayve — route-based travel matching. Tap to jump to the details below.","proj-1")}
+    ${hs(104,56,60,38,"Wayve — route-based travel matching. Tap to jump to the details below.","proj-2")}
     <rect x="30" y="90" width="140" height="10" fill="#3e4c63" stroke="${ink}" stroke-width="2.5"/>
     ${hs(30,90,140,10,"Blink, the Smart Career Kiosk and the Student Management System live on this bench too — scroll down.")}
     <rect x="46" y="100" width="18" height="6" fill="${ink}"/>
@@ -900,14 +1011,19 @@ function boardAbout(){
 function boardProjects(){
   const items = [
     { name:"Voyagenie — AI-Powered Travel Planner", stack:"React · Node.js · Express · MongoDB · OpenAI/Gemini · Maps",
+      links:[{t:"LIVE SITE",u:"https://voyagenie.onrender.com",id:"voyagenie-live"},{t:"GITHUB",u:"https://github.com/hrithikk21/Voyagenie",id:"voyagenie-gh"}],
       bullets:["Built the full application end to end: responsive React frontend and a Node.js/Express backend with MongoDB.",
       "Integrated OpenAI/Gemini, OpenWeatherMap, Cloudinary and interactive maps for AI-generated itineraries, weather and recommendations.",
       "Implemented JWT authentication, budget and expense tracking, and trip management."]},
+    { name:"Aerthx — Carbon Credit Marketplace", stack:"Live product · aerthx.in",
+      links:[{t:"LIVE SITE",u:"https://aerthx.in",id:"aerthx-live"}],
+      bullets:["A carbon credit marketplace, live and running at aerthx.in."]},
     { name:"Wayve — Route-Based Travel Matching Platform", stack:"Next.js · TypeScript · MongoDB/Mongoose · Mapbox · Turf.js",
       bullets:["Designed and built the full-stack MVP: auth, profiles, trip creation, discovery, matching and messaging.",
       "Built route-based matching using Mapbox and Turf.js to find overlapping travel paths.",
       "Architected the app with Next.js App Router, TypeScript, MongoDB/Mongoose and NextAuth.js."]},
     { name:"Blink — Real-Time Chat Application", stack:"React · Node.js · Express · MongoDB · Socket.IO",
+      links:[{t:"GITHUB",u:"https://github.com/hrithikk21/Blink-Realtime-Chat",id:"blink-gh"}],
       bullets:["Built the complete full-stack app with real-time messaging via Socket.IO.",
       "Added online/offline presence, typing indicators, user search and persistent sessions.",
       "Secured the app with JWT and bcrypt behind a responsive, mobile-friendly UI."]},
@@ -918,13 +1034,17 @@ function boardProjects(){
       bullets:["Built a student information system covering identification and record management.",
       "Integrated hardware and software to reduce manual data handling."]}
   ];
-  return `<h2 class="reveal">PROJECTS</h2><div class="role reveal">Five things I built because I wanted them to exist</div>
+  return `<h2 class="reveal">PROJECTS</h2><div class="role reveal">Six things I built because I wanted them to exist</div>
     ${items.map((p,i)=>`
       <div class="entry reveal" id="proj-${i}">
         <div class="entry-title">${p.name}</div>
         <div class="entry-sub">${p.stack}</div>
         <ul>${p.bullets.map(b=>`<li>${b}</li>`).join("")}</ul>
+        ${p.links ? `<div class="proj-links">${p.links.map(l=>`<a class="btn-ghost" href="${l.u}" target="_blank" rel="noopener" data-track="${l.id}">${l.t} ↗</a>`).join("")}</div>` : ""}
       </div>`).join("<div class='divider reveal'></div>")}
+    <div class="divider reveal"></div>
+    <p class="reveal" style="font-size:12.5px;">More of my projects are on GitHub.</p>
+    <div class="proj-links reveal"><a class="btn-primary" href="https://github.com/hrithikk21" target="_blank" rel="noopener" data-track="github-profile">MORE ON GITHUB ↗</a></div>
   `;
 }
 function boardEducation(){
@@ -997,6 +1117,7 @@ function boardResume(){
     <p class="reveal">Everything above, compressed into a document you can actually attach to an email.</p>
     <div class="resume-actions reveal">
       <button class="btn-primary" id="downloadResumeBtn">DOWNLOAD RESUME</button>
+      <button class="btn-ghost" id="viewResumeBtn">VIEW PDF</button>
       <button class="btn-ghost" id="printResumeBtn">PRINT</button>
       <a class="btn-ghost" href="https://www.linkedin.com/in/hrithik-patil-592915321" target="_blank" rel="noopener">VIEW LINKEDIN</a>
     </div>
@@ -1054,6 +1175,7 @@ function revealStagger(container){
 
 function openRoom(id){
   const meta = rooms.find(r=>r.id===id);
+  track("room/" + id, "Room: " + meta.label);
   document.getElementById("room-title").textContent = meta.label;
   document.getElementById("room-sub").textContent = meta.sub;
   document.getElementById("chamber-illust").innerHTML = icons[id] + (reduceMotion? "" : `<div class="scanbeam"></div>`);
@@ -1186,6 +1308,8 @@ function wireRoomExtras(id){
   if(id==="resume"){
     const btn = document.getElementById("downloadResumeBtn");
     if(btn) btn.addEventListener("click", downloadResume);
+    const vbtn = document.getElementById("viewResumeBtn");
+    if(vbtn) vbtn.addEventListener("click", viewResume);
     const pbtn = document.getElementById("printResumeBtn");
     if(pbtn) pbtn.addEventListener("click", ()=>{ window.print(); unlockAchievement("printed","Printed the file. Old school."); });
   }
@@ -1194,97 +1318,34 @@ function wireRoomExtras(id){
       b.addEventListener("click", async ()=>{
         try{ await navigator.clipboard.writeText(b.dataset.copy); }catch(e){}
         b.textContent = "COPIED"; b.classList.add("copied");
-        toast("COPIED TO CLIPBOARD"); blip(650); haptic(8);
+        toast("COPIED TO CLIPBOARD"); blip(650); haptic(8); track("contact/copy-" + (b.dataset.copy.includes("@") ? "email" : "other"));
         setTimeout(()=>{ b.textContent="COPY"; b.classList.remove("copied"); }, 1600);
       });
     });
   }
 }
+const RESUME_PATH = "resume/Hrithik_Patil_Resume.pdf";
+let resumeMissingWarned = false;
 function downloadResume(){
-  const text = `============================================================
-  THE BATCAVE FILE — HRITHIK JATIN PATIL
-  Full Stack Developer · Mumbai, Maharashtra
-============================================================
-
-REACH ME
-  hrithikjpatil40@gmail.com
-  +91 77588 87564
-  linkedin.com/in/hrithik-patil-592915321
-  github.com/hrithikk21
-
-WHO'S BEHIND THE CAVE
-  I build software end to end — interfaces people actually enjoy
-  using, backed by logic and data layers that hold up. My tools
-  of choice are JavaScript, React.js, Node.js, Express.js and
-  MongoDB, and I care more about whether a thing works than
-  about how it looks on a slide.
-
-WHERE I'VE WORKED
-  Apni Pathshala, Mumbai — Software Development Intern / Technical Ops
-    Feb 2026 - Apr 2026
-    → Internal tools for student & operational management
-    → Dashboards and data-visualization frontends
-    → Backend logic, data handling, deployment support
-
-  Lloyd's Infinite Foundation, Remote — Software Development Intern
-    Dec 2025 - Feb 2026
-    → Web modules for educational workflows
-    → Frontend UI + backend data handling
-    → API-based integrations across structured datasets
-
-  Code Alpha — Frontend Developer
-    May 2025 - Jun 2025
-    → Responsive UI components
-    → Interface design and layout improvements
-
-WHAT I BUILT ON MY OWN TIME
-  Voyagenie — AI travel planner (React / Node / Express / MongoDB)
-    End-to-end build with OpenAI/Gemini, weather + maps integration,
-    JWT auth, budget tracking, full trip management.
-
-  Wayve — Route-based travel matching (Next.js / TypeScript / Mapbox)
-    Full-stack MVP: auth, discovery, matching via Mapbox + Turf.js,
-    built on Next.js App Router with MongoDB/Mongoose + NextAuth.
-
-  Blink — Real-time chat (React / Node / Socket.IO)
-    Live messaging, presence, typing indicators, JWT + bcrypt auth.
-
-  Smart Career Kiosk — Raspberry Pi 3B+ offline kiosk
-    7" HDMI display, local CSV/JSON store, multilingual, zero internet.
-
-  Student Management System — hardware + software integration
-    Reduced manual record handling through an integrated system.
-
-EDUCATION
-  B.E. Electronics and Computer Science
-  St John College of Engineering and Management (2022-2026)
-  CGPA: 8.26
-
-CREDENTIALS
-  AWS AI & Generative AI · Power BI · Google Play Store Listing
-  STQA · ISOO · Frontend Development
-
-TOOLKIT
-  Frontend   HTML5, CSS3, JavaScript, React.js, Next.js, TypeScript,
-             Tailwind CSS, Bootstrap
-  Backend    Node.js, Express.js, REST APIs, Socket.IO
-  Data       MongoDB, MySQL
-  Workflow   Git, GitHub, Postman, VS Code
-
-------------------------------------------------------------
-  Pulled from hrithik's interactive portfolio — The Batcave.
-  Full version, live and clickable, wherever you found this.
-------------------------------------------------------------
-`;
-  const blob = new Blob([text], {type:"text/plain"});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url; a.download = "Hrithik_Patil_Batcave_File.txt";
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(()=>URL.revokeObjectURL(url), 3000);
-  toast("RESUME DOWNLOADED");
-  blip(900); haptic(10);
+  // Real file first. HEAD-check so a missing PDF (e.g. before you've added yours to
+  // /resume) fails with a clear message instead of a silent broken download.
+  fetch(RESUME_PATH, { method: "HEAD" })
+    .then((res)=>{
+      if(!res.ok) throw new Error("missing");
+      const a = document.createElement("a");
+      a.href = RESUME_PATH; a.download = "Hrithik_Patil_Resume.pdf";
+      document.body.appendChild(a); a.click(); a.remove();
+      track("resume/download");
+      toast("RESUME DOWNLOADED");
+      blip(900); haptic(10);
+      unlockAchievement("resume-dl","Grabbed the actual resume file.");
+    })
+    .catch(()=>{
+      toast("RESUME FILE NOT FOUND — ADD IT TO /resume");
+      if(!resumeMissingWarned){ resumeMissingWarned = true; console.warn(`Expected a resume PDF at ${RESUME_PATH} — see resume/README.md`); }
+    });
 }
+function viewResume(){ track("resume/view"); window.open(RESUME_PATH, "_blank", "noopener"); }
 function downloadBadge(){
   const c = document.createElement("canvas");
   c.width = 640; c.height = 400;
@@ -1442,6 +1503,7 @@ document.addEventListener("keydown", (e)=>{
     if(termOverlay.classList.contains("show")) closeTerm();
     if(document.getElementById("avatarOverlay").classList.contains("show")) closeAvatarPanel();
     if(document.getElementById("musicPanel").classList.contains("show")) closeMusicPanel();
+    if(document.getElementById("morePanel").classList.contains("show")) closeMorePanel();
   }
   if(e.key.length===1){
     typedBuffer = (typedBuffer + e.key).slice(-12).toUpperCase();
@@ -1466,10 +1528,12 @@ let detectiveOn = false;
 function setDetective(on){
   detectiveOn = on;
   document.body.classList.toggle("detective", on);
-  document.getElementById("detectiveBtn").classList.toggle("active", on);
+  const sw = document.getElementById("detectiveSwitch");
+  sw.classList.toggle("on", on);
+  sw.setAttribute("aria-checked", String(on));
 }
-document.getElementById("detectiveBtn").addEventListener("click", ()=>{
-  setDetective(!detectiveOn); blip(600);
+document.getElementById("detectiveSwitch").addEventListener("click", ()=>{
+  setDetective(!detectiveOn); blip(600); haptic(6);
   toast(detectiveOn? "DETECTIVE MODE ON":"DETECTIVE MODE OFF");
   setSpeech(detectiveOn ? "Detective mode on. Nothing stays hidden now." : "Back to normal vision.");
 });
@@ -1510,13 +1574,26 @@ function stopPad(){
   setTimeout(()=>{ oscs.forEach(o=>{ try{o.stop();}catch(e){} }); try{lfo.stop();}catch(e){} }, 1100);
   padNodes = null;
 }
-document.getElementById("soundBtn").addEventListener("click", ()=>{
+document.getElementById("sfxSwitch").addEventListener("click", ()=>{
   ensureAudio();
   soundOn = !soundOn;
-  document.getElementById("soundBtn").classList.toggle("active", soundOn);
+  const sw = document.getElementById("sfxSwitch");
+  sw.classList.toggle("on", soundOn);
+  sw.setAttribute("aria-checked", String(soundOn));
   if(soundOn){ blip(440); startPad(); } else { stopPad(); }
 });
 function haptic(ms){ try{ if(navigator.vibrate) navigator.vibrate(ms); }catch(e){} }
+
+/* ---------- "more" popover: houses the two lower-traffic toggles ---------- */
+const moreBtn = document.getElementById("moreBtn");
+const morePanel = document.getElementById("morePanel");
+function openMorePanel(){ morePanel.classList.add("show"); moreBtn.setAttribute("aria-expanded","true"); blip(500); }
+function closeMorePanel(){ morePanel.classList.remove("show"); moreBtn.setAttribute("aria-expanded","false"); }
+moreBtn.addEventListener("click", (e)=>{ e.stopPropagation(); morePanel.classList.contains("show") ? closeMorePanel() : openMorePanel(); });
+document.getElementById("moreClose").addEventListener("click", closeMorePanel);
+document.addEventListener("click", (e)=>{
+  if(morePanel.classList.contains("show") && !e.target.closest("#morePanel") && !e.target.closest("#moreBtn")) closeMorePanel();
+});
 
 /* ============================================================
    MUSIC SYSTEM — an actual background track, separate from the
@@ -1536,9 +1613,12 @@ const musicVol = document.getElementById("musicVol");
 const musicTrackName = document.getElementById("musicTrackName");
 const musicNote = document.getElementById("musicNote");
 
-let musicOn = false;
+let musicOn = true; // on by default so the score starts with the first tap, unless a visitor turned it off before
 let musicAvailable = true; // flips false if no audio file resolves
-try{ musicOn = localStorage.getItem(MUSIC_ON_KEY) === "1"; }catch(e){}
+try{
+  const stored = localStorage.getItem(MUSIC_ON_KEY);
+  if(stored !== null) musicOn = stored === "1";
+}catch(e){}
 try{
   const v = parseFloat(localStorage.getItem(MUSIC_VOL_KEY));
   if(!isNaN(v)) bgMusic.volume = Math.min(1, Math.max(0, v));
@@ -1546,7 +1626,12 @@ try{
 }catch(e){ bgMusic.volume = 0.35; }
 musicVol.value = bgMusic.volume;
 
-bgMusic.addEventListener("error", ()=>{ musicAvailable = false; try{ bgMusic.pause(); }catch(e){} updateMusicUI(); }, true);
+bgMusic.addEventListener("error", ()=>{
+  // NETWORK_NO_SOURCE (3) means every <source> was tried and none worked — a genuine
+  // "no track" state. Anything else here is just the normal, harmless noise of the
+  // browser trying (and skipping) one candidate source before it finds a working one.
+  if(bgMusic.networkState === 3){ musicAvailable = false; try{ bgMusic.pause(); }catch(e){} updateMusicUI(); }
+}, true);
 bgMusic.addEventListener("loadedmetadata", ()=>{ musicAvailable = true; musicTrackName.textContent = "Track ready"; updateMusicUI(); });
 bgMusic.addEventListener("play", updateMusicUI);
 bgMusic.addEventListener("pause", updateMusicUI);
@@ -1575,10 +1660,17 @@ function setMusicOn(on, { silent } = {}){
   else if(!silent) playMusic();
   updateMusicUI();
 }
-function playMusic(){
+function playMusic(retry){
   if(!musicAvailable){ toast("NO TRACK FOUND — SEE MUSIC/README.MD"); updateMusicUI(); return; }
   const p = bgMusic.play();
-  if(p && p.catch) p.catch(()=>{ toast("TAP PLAY TO START THE SCORE"); updateMusicUI(); });
+  if(p && p.catch) p.catch((err)=>{
+    // Some browsers abort the very first play() call while they're still settling on
+    // which <source> to use (harmless race, not an autoplay block) — one silent retry
+    // clears it without bothering the visitor.
+    if(err && err.name === "AbortError" && !retry){ playMusic(true); return; }
+    if(err && err.name === "NotAllowedError"){ toast("TAP PLAY TO START THE SCORE"); }
+    updateMusicUI();
+  });
 }
 function toggleMusicPlay(){
   if(bgMusic.paused){ if(!musicOn) setMusicOn(true, {silent:true}); playMusic(); }
@@ -1799,6 +1891,7 @@ function openTerm(){
   setTimeout(()=> termInput.focus(), 200);
   blip(500);
   unlockAchievement("terminal_used","Opened the Batcomputer.");
+  track("terminal/open");
 }
 function closeTerm(){ termOverlay.classList.remove("show"); document.body.classList.remove("overlay-open"); }
 document.getElementById("termBtn").addEventListener("click", openTerm);
@@ -1810,7 +1903,7 @@ const termCommands = {
   help(){ termPrint("Commands: whoami, skills, projects, experience, education, certifications, contact, resume, status, badge, vault, achievements, clear, exit"); },
   whoami(){ termPrint("Hrithik Jatin Patil — Full Stack Developer, Mumbai. Building things that work end to end."); },
   skills(){ termPrint("Frontend: HTML5, CSS3, JS, React.js, Next.js, TypeScript, Tailwind"); termPrint("Backend: Node.js, Express.js, REST APIs, Socket.IO"); termPrint("Database: MongoDB, MySQL   Tools: Git, GitHub, Postman, VS Code"); },
-  projects(){ termPrint("Voyagenie, Wayve, Blink, Smart Career Kiosk, Student Management System. Open the PROJECTS room for details."); },
+  projects(){ termPrint("Voyagenie (voyagenie.onrender.com), Aerthx (aerthx.in), Wayve, Blink, Smart Career Kiosk, Student Management System. More: github.com/hrithikk21"); },
   experience(){ termPrint("Apni Pathshala (2026), Lloyd's Infinite Foundation (2025-26), Code Alpha (2025)."); },
   education(){ termPrint("B.E. Electronics and Computer Science, St John College of Engineering and Management. CGPA 8.26."); },
   certifications(){ termPrint("AWS AI & Generative AI, Power BI, Google Play Store Listing, STQA, ISOO, Frontend Development."); },
@@ -1929,9 +2022,10 @@ function avatarAccessoryPath(style){
   if(style==="vents") return `<line x1="56" y1="100" x2="66" y2="112" stroke="${ink}" stroke-width="2"/><line x1="104" y1="100" x2="94" y2="112" stroke="${ink}" stroke-width="2"/>`;
   return "";
 }
-function buildAvatarSVG(cfg){
+function buildAvatarSVG(cfg, opts={}){
   const suitHex = (avatarOptions.suit.find(s=>s.id===cfg.suit) || avatarOptions.suit[0]).hex;
-  return `<svg viewBox="0 0 160 210" xmlns="http://www.w3.org/2000/svg">
+  const vb = opts.portrait ? "18 -4 124 118" : "0 0 160 210";
+  return `<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg">
     ${avatarCapePath(cfg.cape)}
     <path d="M40 100 L120 100 L134 200 L26 200 Z" fill="${suitHex}" stroke="${ink}" stroke-width="3"/>
     <rect x="66" y="82" width="28" height="26" fill="${suitHex}" stroke="${ink}" stroke-width="2.5"/>
@@ -1946,6 +2040,11 @@ function buildAvatarSVG(cfg){
 function renderAvatarPreview(){
   document.getElementById("avatarPreview").innerHTML = buildAvatarSVG(avatarConfig);
 }
+function renderAvatarBadge(){
+  const el = document.getElementById("avatarBadgeSvg");
+  if(el) el.innerHTML = buildAvatarSVG(avatarConfig, { portrait:true });
+}
+renderAvatarBadge();
 function renderAvatarOptions(){
   const wrap = document.getElementById("avatarOptions");
   const groupLabels = { cowl:"Cowl Style", suit:"Suit Material", cape:"Cape Style", emblem:"Emblem", eyes:"Lens Style", belt:"Belt", accessory:"Accessory" };
@@ -1968,6 +2067,7 @@ function renderAvatarOptions(){
       saveAvatarConfig();
       renderAvatarPreview();
       wrap.querySelectorAll(`[data-group="${group}"]`).forEach(b=> b.classList.toggle("selected", b.dataset.id===id));
+      renderAvatarBadge();
       blip(500 + Math.random()*200); haptic(6);
     });
   });
@@ -1980,7 +2080,7 @@ function openAvatarPanel(){
   blip(500);
 }
 function closeAvatarPanel(){ document.getElementById("avatarOverlay").classList.remove("show"); document.body.classList.remove("overlay-open"); }
-document.getElementById("avatarBtn").addEventListener("click", openAvatarPanel);
+document.getElementById("avatarBadge").addEventListener("click", openAvatarPanel);
 document.getElementById("avatarClose").addEventListener("click", closeAvatarPanel);
 document.getElementById("avatarOverlay").addEventListener("click",(e)=>{ if(e.target.id==="avatarOverlay") closeAvatarPanel(); });
 

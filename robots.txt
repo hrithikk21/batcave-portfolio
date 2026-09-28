@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hrithikk21.github.io/batcave-portfolio/sitemap.xml
